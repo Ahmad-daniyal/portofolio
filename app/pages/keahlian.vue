@@ -15,7 +15,7 @@ useSeo(
           <span class="section-head__kicker">// Keahlian</span>
           <h1 class="page-head__title">Senjata Utama</h1>
           <p class="page-head__desc">
-            Hard skill & soft skill yang saya bawa ke meja kerja.
+            nah ini amunisi si guweh buat dibawa ke meja kerja
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@ useSeo(
       <div class="container">
         <SectionHeading
           kicker="// Hard Skills"
-          title="Yang Bisa Saya Eksekusi"
+          title="Yang Bisa Si Guweh Eksekusi"
         />
         <div class="grid grid--3">
           <NeoCard v-for="skill in hardSkills" :key="skill.title" hover>

@@ -14,7 +14,7 @@ useSeo(
       <div class="container">
         <div class="section-head" style="margin-bottom: 0">
           <span class="section-head__kicker">// Tentang</span>
-          <h1 class="page-head__title">Kenalan Sama Saya</h1>
+          <h1 class="page-head__title">Kenalan Sama Si Guweh</h1>
           <p class="page-head__desc">
             Bukan cuma nulis kode — tapi mikirin arsitektur, dokumentasi, dan
             pengalaman pengguna.
@@ -54,8 +54,8 @@ useSeo(
         <div style="margin-top: 3.5rem">
           <SectionHeading
             kicker="// Cara Kerja"
-            title="Gimana Saya Bekerja"
-            desc="Cara saya ngoding dan nyelesaiin sesuatu."
+            title="Gimana Si Guweh Bekerja"
+            desc="Cara si guweh ngoding dan nyelesaiin sesuatu."
           />
           <div class="grid grid--2">
             <NeoCard

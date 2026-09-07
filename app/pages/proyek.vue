@@ -18,7 +18,7 @@ useSeo(
       <div class="container">
         <div class="section-head" style="margin-bottom: 0">
           <span class="section-head__kicker">// Proyek</span>
-          <h1 class="page-head__title">Yang Pernah Saya Bangun</h1>
+          <h1 class="page-head__title">Yang Pernah Si Guweh Bangun</h1>
           <p class="page-head__desc">
             Dari aplikasi web interaktif sampai sistem IoT yang digerakkan
             mikrokontroler — semuanya dibuat bertahap dan terstruktur.

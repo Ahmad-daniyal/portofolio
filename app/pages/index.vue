@@ -29,7 +29,7 @@ const marqueeItems = [
             Terbuka untuk proyek & kolaborasi
           </span>
 
-          <p class="hero__hello">Halo, saya</p>
+          <p class="hero__hello">Halo, si guweh</p>
           <h1 class="hero__title">{{ profile.name }}</h1>
           <h2 class="hero__role">{{ profile.role }}</h2>
           <p class="hero__meta">
@@ -39,7 +39,7 @@ const marqueeItems = [
 
           <div class="hero__cta">
             <NeoButton to="/proyek">Lihat Proyek</NeoButton>
-            <NeoButton to="/kontak" variant="line">Kontak Saya</NeoButton>
+            <NeoButton to="/kontak" variant="line">Kontak Si Guweh</NeoButton>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ const marqueeItems = [
           <span class="section-head__kicker">// Portofolio</span>
           <h2 class="section-head__title">Proyek Unggulan</h2>
           <p class="section-head__desc">
-            Beberapa proyek yang paling sering saya kerjakan — dari web app sampai
+            Beberapa proyek yang paling sering si guweh kerjakan — dari web app sampai
             sistem IoT berbasis mikrokontroler.
           </p>
         </div>
@@ -137,9 +137,9 @@ const marqueeItems = [
         <div class="contact-cta">
           <div>
             <p class="contact-cta__sub">Punya ide atau mau kolaborasi?</p>
-            <h2 class="contact-cta__title">Tertarik ngobrol sama saya?</h2>
+            <h2 class="contact-cta__title">Tertarik ngobrol sama si guweh?</h2>
           </div>
-          <NeoButton to="/kontak" variant="dark">Hubungi Saya</NeoButton>
+          <NeoButton to="/kontak" variant="dark">Hubungi Si Guweh</NeoButton>
         </div>
       </div>
     </section>

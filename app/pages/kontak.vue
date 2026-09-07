@@ -73,7 +73,7 @@ const tel = `tel:${profile.phone.replace(/[^+\d]/g, '')}`
               <p class="contact-card__value">{{ profile.location }}</p>
               <p class="contact-card__handle">Jawa Barat, Indonesia</p>
               <div class="contact-card__action">
-                <NeoButton :href="mail" variant="red" size="sm">Sapa Saya</NeoButton>
+                <NeoButton :href="mail" variant="red" size="sm">Sapa Si Guweh</NeoButton>
               </div>
             </NeoCard>
           </div>
