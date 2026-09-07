@@ -6,6 +6,7 @@ const links = [
   { label: 'Tentang', to: '/tentang' },
   { label: 'Keahlian', to: '/keahlian' },
   { label: 'Proyek', to: '/proyek' },
+  { label: 'Game', to: '/game' },
   { label: 'Kontak', to: '/kontak' },
 ]
 

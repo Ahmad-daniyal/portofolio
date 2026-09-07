@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/tentang', '/keahlian', '/proyek', '/kontak'],
+      routes: ['/', '/tentang', '/keahlian', '/proyek', '/game', '/kontak'],
     },
   },
 })
