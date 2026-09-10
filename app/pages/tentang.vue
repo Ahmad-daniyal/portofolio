@@ -28,14 +28,14 @@ useSeo(
         <div class="section-head">
           <span class="section-head__kicker">// Ringkasan</span>
         </div>
-        <NeoCard hover>
+        <NeoCard v-reveal hover>
           <p style="font-size: 1.1rem; margin-bottom: 0">
             {{ profile.summary }}
           </p>
         </NeoCard>
 
         <div style="margin-top: 2.5rem">
-          <div class="quote-card">
+          <div class="quote-card" v-reveal="120">
             <span class="quote-card__mark">— moto hidup</span>
             <p class="quote-card__text">“{{ profile.motto }}”</p>
           </div>
@@ -45,7 +45,7 @@ useSeo(
           <div class="section-head">
             <span class="section-head__kicker">// Kepribadian</span>
           </div>
-          <NeoCard hover>
+          <NeoCard v-reveal hover>
             <p style="margin-bottom: 0">{{ profile.personality }}</p>
           </NeoCard>
         </div>
@@ -61,6 +61,7 @@ useSeo(
             <NeoCard
               v-for="(item, i) in profile.wayOfWork"
               :key="item.title"
+              v-reveal="i * 70"
               hover
             >
               <span class="method__num">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -78,7 +79,12 @@ useSeo(
             desc="Dari HTML murni sampai sistem IoT — belajar lintas teknologi."
           />
           <ol class="timeline">
-            <li v-for="(item, i) in timeline" :key="item.phase" class="timeline__item">
+            <li
+              v-for="(item, i) in timeline"
+              :key="item.phase"
+              class="timeline__item"
+              v-reveal="i * 90"
+            >
               <span class="timeline__mark">{{ String(i + 1).padStart(2, '0') }}</span>
               <h3 class="timeline__phase">{{ item.phase }}</h3>
               <p class="timeline__desc">{{ item.description }}</p>

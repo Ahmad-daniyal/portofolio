@@ -23,7 +23,7 @@ const marqueeItems = [
     <!-- Hero -->
     <section class="hero">
       <div class="container hero__inner">
-        <div class="hero__text">
+        <div class="hero__text" v-reveal>
           <span class="hero__badge">
             <span class="hero__badge-dot" />
             Terbuka untuk proyek & kolaborasi
@@ -43,7 +43,7 @@ const marqueeItems = [
           </div>
         </div>
 
-        <div class="hero__media">
+        <div class="hero__media" v-reveal="120">
           <div class="neo-card hero__card">
             <div class="hero__card-head">
               <span class="hero__card-avatar">AD</span>
@@ -85,17 +85,17 @@ const marqueeItems = [
     <section class="section">
       <div class="container">
         <div class="facts">
-          <NeoCard hover>
+          <NeoCard v-reveal hover>
             <p class="fact__title">Lokasi</p>
             <p class="fact__value">{{ profile.location }}</p>
             <p class="fact__sub">Jawa Barat, Indonesia</p>
           </NeoCard>
-          <NeoCard hover>
+          <NeoCard v-reveal="120" hover>
             <p class="fact__title">Langkah berikut</p>
             <p class="fact__value">{{ profile.classYear }} PPLG</p>
             <p class="fact__sub">Pengembangan Perangkat Lunak & Gim</p>
           </NeoCard>
-          <NeoCard hover>
+          <NeoCard v-reveal="240" hover>
             <p class="fact__title">Saat ini</p>
             <p class="fact__value">{{ profile.classRole }}</p>
             <p class="fact__sub">Di kelas {{ profile.classYear }}</p>
@@ -107,7 +107,7 @@ const marqueeItems = [
     <!-- Proyek unggulan -->
     <section class="section" style="padding-top: 0">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" v-reveal>
           <span class="section-head__kicker">// Portofolio</span>
           <h2 class="section-head__title">Proyek Unggulan</h2>
           <p class="section-head__desc">
@@ -122,6 +122,7 @@ const marqueeItems = [
             :key="project.name"
             :project="project"
             :index="i + 1"
+            v-reveal="i * 80"
           />
         </div>
 
@@ -134,7 +135,7 @@ const marqueeItems = [
     <!-- CTA -->
     <section class="section" style="padding-top: 3rem">
       <div class="container">
-        <div class="contact-cta">
+        <div class="contact-cta" v-reveal>
           <div>
             <p class="contact-cta__sub">Punya ide atau mau kolaborasi?</p>
             <h2 class="contact-cta__title">Tertarik ngobrol sama si guweh?</h2>

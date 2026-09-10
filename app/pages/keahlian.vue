@@ -11,7 +11,7 @@ useSeo(
   <div>
     <section class="page-head">
       <div class="container">
-        <div class="section-head" style="margin-bottom: 0">
+        <div class="section-head" style="margin-bottom: 0" v-reveal>
           <span class="section-head__kicker">// Keahlian</span>
           <h1 class="page-head__title">Senjata Utama</h1>
           <p class="page-head__desc">
@@ -28,7 +28,12 @@ useSeo(
           title="Yang Bisa Si Guweh Eksekusi"
         />
         <div class="grid grid--3">
-          <NeoCard v-for="skill in hardSkills" :key="skill.title" hover>
+          <NeoCard
+            v-for="(skill, i) in hardSkills"
+            :key="skill.title"
+            v-reveal="i * 70"
+            hover
+          >
             <h3 class="skill-card__title">{{ skill.title }}</h3>
             <p v-if="skill.description" class="skill-card__desc">
               {{ skill.description }}
@@ -55,6 +60,7 @@ useSeo(
               v-for="(skill, i) in softSkills"
               :key="skill.title"
               class="soft-card"
+              v-reveal="i * 70"
             >
               <p class="soft-card__num">{{ String(i + 1).padStart(2, '0') }}</p>
               <h3 class="soft-card__title">{{ skill.title }}</h3>
@@ -68,7 +74,7 @@ useSeo(
             kicker="// Tools"
             title="Tools & Lingkungan"
           />
-          <NeoCard hover>
+          <NeoCard v-reveal hover>
             <div class="tools-card__chips">
               <Tag v-for="tool in tools" :key="tool" variant="dark">
                 {{ tool }}

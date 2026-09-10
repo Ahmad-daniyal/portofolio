@@ -16,7 +16,7 @@ useSeo(
 
     <section class="page-head">
       <div class="container">
-        <div class="section-head" style="margin-bottom: 0">
+        <div class="section-head" style="margin-bottom: 0" v-reveal>
           <span class="section-head__kicker">// Proyek</span>
           <h1 class="page-head__title">Yang Pernah Si Guweh Bangun</h1>
           <p class="page-head__desc">
@@ -35,6 +35,7 @@ useSeo(
             :key="project.name"
             :project="project"
             :index="i + 1"
+            v-reveal="i * 70"
           />
         </div>
       </div>

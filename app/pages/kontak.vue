@@ -14,7 +14,7 @@ const tel = `tel:${profile.phone.replace(/[^+\d]/g, '')}`
   <div>
     <section class="page-head">
       <div class="container">
-        <div class="section-head" style="margin-bottom: 0">
+        <div class="section-head" style="margin-bottom: 0" v-reveal>
           <span class="section-head__kicker">// Kontak</span>
           <h1 class="page-head__title">Mari Terhubung</h1>
           <p class="page-head__desc">
@@ -27,7 +27,7 @@ const tel = `tel:${profile.phone.replace(/[^+\d]/g, '')}`
 
     <div class="page-body">
       <div class="container">
-        <div class="contact-cta">
+        <div class="contact-cta" v-reveal>
           <div>
             <p class="contact-cta__sub">Paling cepat dibales via email</p>
             <h2 class="contact-cta__title">{{ profile.email }}</h2>
@@ -37,49 +37,57 @@ const tel = `tel:${profile.phone.replace(/[^+\d]/g, '')}`
 
         <div style="margin-top: 2.5rem">
           <div class="grid grid--2">
-            <NeoCard hover>
+            <NeoCard v-reveal hover>
               <p class="contact-card__label">Email</p>
               <p class="contact-card__value">{{ profile.email }}</p>
-              <div class="contact-card__action">
+              <div class="contact-card__actions">
                 <NeoButton :href="mail" size="sm">Kirim Email</NeoButton>
+                <CopyButton label="Email" :value="profile.email" />
               </div>
             </NeoCard>
 
-            <NeoCard hover>
+            <NeoCard v-reveal="100" hover>
               <p class="contact-card__label">Telepon / WhatsApp</p>
               <p class="contact-card__value">{{ profile.phone }}</p>
-              <div class="contact-card__action">
+              <div class="contact-card__actions">
                 <NeoButton :href="tel" variant="line" size="sm">Telepon</NeoButton>
+                <CopyButton label="Nomor" :value="profile.phone" variant="line" />
               </div>
             </NeoCard>
 
             <NeoCard
-              v-for="social in socials"
+              v-for="(social, i) in socials"
               :key="social.label"
+              v-reveal="200 + i * 100"
               hover
             >
               <p class="contact-card__label">{{ social.label }}</p>
               <p class="contact-card__value">{{ social.handle }}</p>
               <p class="contact-card__handle">{{ social.url }}</p>
-              <div class="contact-card__action">
+              <div class="contact-card__actions">
                 <NeoButton :href="social.url" external variant="dark" size="sm">
                   Buka ↗
                 </NeoButton>
+                <CopyButton
+                  :label="social.label"
+                  :value="social.handle"
+                  variant="dark"
+                />
               </div>
             </NeoCard>
 
-            <NeoCard hover>
+            <NeoCard v-reveal="300" hover>
               <p class="contact-card__label">Lokasi</p>
               <p class="contact-card__value">{{ profile.location }}</p>
               <p class="contact-card__handle">Jawa Barat, Indonesia</p>
-              <div class="contact-card__action">
+              <div class="contact-card__actions">
                 <NeoButton :href="mail" variant="red" size="sm">Sapa Si Guweh</NeoButton>
               </div>
             </NeoCard>
           </div>
         </div>
 
-        <p class="contact-note">
+        <p class="contact-note" v-reveal>
           “{{ profile.motto }}” — jadi, langsung aja kenalan.
         </p>
       </div>
